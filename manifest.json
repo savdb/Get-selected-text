@@ -1,0 +1,21 @@
+{
+   "background_page": "background.html", 
+   "browser_action": {
+      "default_icon": "icon_32.png",
+      "default_title": "Get selected HTML"
+   },
+   "description": "Gets the HTML of the user's selection",
+   "icons": {
+      "32": "icon_32.png"
+   },
+   "name": "HTML Selection",
+   "permissions": [ "http://*/*", "https://*/*", "tabs" ],
+     "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content_script.js"]
+    }
+  ],
+   "version": "0.0.1"
+   
+}

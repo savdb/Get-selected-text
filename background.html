@@ -1,0 +1,25 @@
+<html>
+<head>
+<script>
+
+chrome.browserAction.onClicked.addListener(function(tab) {
+  chrome.tabs.sendRequest(tab.id, {method: "getSelection"}, function(response){
+  
+	var url=response.url;
+	var subject=response.subject;
+    var body= response.body;
+		
+	if(body==''){
+		body="No text selected";
+		//You may choose to pop up a text box allowing the user to enter in a message instead.
+	}
+
+	//From here, you can POST the variables to any web service you choose.
+	
+	
+  });
+});
+
+</script>
+</head>
+</html>
