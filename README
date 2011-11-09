@@ -1,0 +1,3 @@
+This project provides an example for getting the HTML of the selected text in a Google Chrome extension.  There are two parts to the code: a content script and a background page.  The background page is unable to access the properties of the tab, so it must ask the content script to access it.  
+
+From here, you can add on to the background.html page to do whatever you want with the text. I created a web service that will email the selected html to myself for reference.
